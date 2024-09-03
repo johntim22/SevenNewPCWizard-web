@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--navbar here-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Seven IT Department</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!--items for navbar here in li tag-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <!--main content here-->
+      <div class="container">
+        <h2>Welcome to your new computer!</h2><br>
+        <h5>Please select all software you would like to install! More choices available after first deployment!</h5>
+        <br>
+        <form id="softwareForm">
+        <fieldset>
+            <legend>Basic software</legend>
+            <p><i>It is recommended that you install all items from this category!</i></p>
+            <input type="checkbox" id="brave" name="brave" value="Brave.Brave" checked>
+            <label for="brave">Brave Browser</label><br>
+            <input type="checkbox" id="360antivirus" name="360antivirus" value="9NBLGGH1NP58" checked>
+            <label for="360antivirus">360 Total Security</label><br>
+            <input type="checkbox" id="foxitpdf" name="foxitpdf" value="XPFCG5NRKXQPKT">
+            <label for="foxitpdf">Foxit PDF Reader</label><br>
+            <input type="checkbox" id="winrar" name="winrar" value="RARLab.WinRAR">
+            <label for="winrar">WinRAR Archive Manager</label><br>
+            <input type="checkbox" id="qbit" name="qbit" value="qBittorrent.qBittorrent">
+            <label for="qbit">QBitTorrent Manager</label><br>
+            <input type="checkbox" id="python" name="python" value="Python.Python.3.10">
+            <label for="python">Python 3.10</label><br>
+            <input type="checkbox" id="java" name="java" value="Oracle.JDK.22">
+            <label for="java">Java 22 (JDK)</label><br>
+            <input type="checkbox" id="net" name="net" value="Microsoft.DotNet.SDK.6">
+            <label for="java">Microsfot .NET 6 SDK</label><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Productivity Tools</legend>
+            <p><i>For Microsoft Office please contact the IT Department!</i></p>
+            <input type="checkbox" id="powertoys" name="powertoys" value="XP89DCGQ3K6VLD" checked>
+            <label for="powertoys">MS PowerToys</label><br>
+            <input type="checkbox" id="libreoffice" name="libreoffice" value="TheDocumentFoundation.LibreOffice">
+            <label for="libreoffice">LibreOffice</label><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Security Tools</legend>
+            <input type="checkbox" id="malbytes" name="malbytes" value="Malwarebytes.Malwarebytes" checked>
+            <label for="malbytes">Malwarebytes</label><br>
+            <input type="checkbox" id="superantispyware" name="superantispyware" value="SUPERAntiSpyware.SUPERAntiSpyware" checked>
+            <label for="malbytes">Super AntiSpyware</label><br>
+            
+        </fieldset><br>
+        <fieldset>
+            <legend>Programming Tools (IT Only)</legend>
+            <input type="checkbox" id="intelj" name="intelj" value="JetBrains.IntelliJIDEA.Community">
+            <label for="intelj">IntelJ Idea IDE for Java</label><br>
+            <input type="checkbox" id="pycharm" name="pycharm" value="JetBrains.PyCharm.Community">
+            <label for="pycharm">PyCharm IDE for Python</label><br>
+            <input type="checkbox" id="vscode" name="vscode" value="Microsoft.VisualStudioCode">
+            <label for="vscode">Visual Studio Code</label><br>
+            <input type="checkbox" id="notepad++" name="notead++" value="Notepad++.Notepad++">
+            <label for="notepad++">Notepad++</label><br>
+            
+        </fieldset><br>
+        <fieldset>
+            <legend>Data Analytics Tools</legend>
+           <p><i>For Alteryx and Tableau please contact the HR Department!</i></p>
+           <input type="checkbox" id="r" name="r" value="RProject.R">
+            <label for="skype">R Programming Language</label><br>
+            <input type="checkbox" id="rstudiuo" name="rstudiuo" value="Posit.RStudio">
+            <label for="rstudiuo">R Studio</label><br>
+            <input type="checkbox" id="KNIME" name="KNIME" value="KNIMEAG.KNIMEAnalyticsPlatform">
+            <label for="KNIME">KNIME Data Analytics</label><br>
+            <input type="checkbox" id="PowerBI" name="PowerBI" value="Microsoft.PowerBI">
+            <label for="PowerBI">Microsoft PowerBI</label><br>
+            
+        </fieldset><br>
+        <fieldset>
+            <legend>Messaging Tools</legend>
+            <input type="checkbox" id="skype" name="skype" value="9WZDNCRFJ364">
+            <label for="skype">Skype</label><br>
+            <input type="checkbox" id="zoom" name="zoom" value="XP99J3KP4XZ4VV">
+            <label for="zoom">Zoom Workspace</label><br>
+            <input type="checkbox" id="discord" name="discord" value="XPDC2RH70K22MN">
+            <label for="Discord">Discord</label><br>
+            <input type="checkbox" id="msteams" name="msteams" value="XP8BT8DW290MPQ">
+            <label for="msteams">Microsoft Teams</label><br>
+        </fieldset><br>
+        <!--<fieldset>
+            <legend>Approved Games</legend>
+      
+            
+        </fieldset><br>--->
+        <!-- Additional fieldsets for other software categories here -->
+        <input type="submit" value="Submit">
+    </form>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("softwareForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        
+        // Collect selected checkboxes
+        let selectedSoftware = [];
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(function(checkbox) {
+            selectedSoftware.push(checkbox.value);
+        });
+
+        if (selectedSoftware.length === 0) {
+            alert("Please select at least one software.");
+            return;
+        }
+
+        // Generate the .bat file content
+        let batContent = selectedSoftware.map(software => `winget install ${software}`).join("\n");
+
+        // Create a Blob with the batContent and create a download link
+        let blob = new Blob([batContent], { type: "text/plain" });
+        let link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "install_software.bat";
+
+        // Append the link, trigger the download, and remove the link
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    </script>
+  </body>
+</html>
