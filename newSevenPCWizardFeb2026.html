@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Software Installation Wizard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .step { display: none; }
+      .step.active { display: block; }
+    </style>
+  </head>
+  <body>
+    <!--navbar here-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Seven IT Department</a>
+      </div>
+    </nav>
+    <br>
+
+    <!-- Progress bar -->
+    <div class="container">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+      </div>
+    </div>
+    <br>
+
+    <!-- Form with steps -->
+    <div class="container">
+      <form id="softwareForm">
+        <!-- Welcome Message Step -->
+        <div class="step active">
+          <fieldset>
+            <legend>✨ Welcome to your new computer!</legend>
+            <p>This wizard will guide you through selecting and installing the necessary software for your system. Please click "Start" to proceed.</p>
+          </fieldset>
+        </div>
+
+        <!-- SYSTEM SECURITY -->
+        <div class="step">
+          <fieldset>
+            <legend>🔐 System Security</legend>
+            <p><i>If you require a paid Antivirus license please contact the IT Department!</i></p>
+
+            <input type="checkbox" id="avastfree" name="avastfree" value="XPDNZJFNCR1B07" checked disabled>
+            <label for="avastfree">Avast Free Antivirus</label><br>
+          </fieldset>
+        </div>
+
+        <!-- INTERNET BROWSING -->
+        <div class="step">
+          <fieldset>
+            <legend>🌐 Internet Browsing</legend>
+            <p><i>Recommended: install at least one browser.</i></p>
+
+            <input type="checkbox" id="brave" name="brave" value="brave.brave" checked>
+            <label for="brave">Brave Browser</label><br>
+
+            <input type="checkbox" id="google_chrome" name="google_chrome" value="google.chrome" checked>
+            <label for="google_chrome">Google Chrome</label><br>
+          </fieldset>
+        </div>
+
+        <!-- OFFICE & DOCUMENTS -->
+        <div class="step">
+          <fieldset>
+            <legend>📄 Office & Documents</legend>
+            <p><i>For Microsoft Office 365 please contact the IT Department!</i></p>
+            <p><i>If you require a paid PDF Editor license please contact the IT Department!</i></p>
+
+            <input type="checkbox" id="libre_office" name="libre_office" value="TheDocumentFoundation.LibreOffice" checked>
+            <label for="libre_office">Libre Office</label><br>
+
+            <input type="checkbox" id="foxit_reader" name="foxit_reader" value="000" checked>
+            <label for="foxit_reader">Foxit Reader</label><br>
+
+          </fieldset>
+        </div>
+
+        <!-- PRODUCTIVITY & COLLABORATION: Project & Task Management -->
+        <div class="step">
+          <fieldset>
+            <legend>🗂️ Project & Task Management</legend>
+            <p><i>Pick what your team uses (you can select more than one).</i></p>
+
+            <input type="checkbox" id="asana" name="asana" value="asana.asana">
+            <label for="asana">Asana</label><br>
+
+            <input type="checkbox" id="clickup" name="clickup" value="clickup.clickup">
+            <label for="clickup">ClickUp</label><br>
+
+            <input type="checkbox" id="monday" name="monday" value="monday.monday">
+            <label for="monday">monday.com</label><br>
+
+            <input type="checkbox" id="wrike" name="wrike" value="Wrike.WrikeDesktopApp">
+            <label for="wrike">Wrike</label><br>
+
+            <input type="checkbox" id="jira" name="jira" value="9PGNM3C7F1F7">
+            <label for="jira">Jira</label><br>
+
+            <input type="checkbox" id="trello" name="trello" value="9NBLGGH4XXVW">
+            <label for="trello">Trello</label><br>
+          </fieldset>
+        </div>
+
+        <!-- PRODUCTIVITY & COLLABORATION: To-Do Lists -->
+        <div class="step">
+          <fieldset>
+            <legend>✅ To-Do Lists & Personal Task Managers</legend>
+
+            <input type="checkbox" id="todoist" name="todoist" value="9MWF2DWS5Z9N">
+            <label for="todoist">Todoist</label><br>
+
+            <input type="checkbox" id="microsoft_todo" name="microsoft_todo" value="9NBLGGH5R558">
+            <label for="microsoft_todo">Microsoft To Do</label><br>
+
+            <input type="checkbox" id="anydo" name="anydo" value="anydo.anydo">
+            <label for="anydo">Any.do</label><br>
+
+            <input type="checkbox" id="ticktick" name="ticktick" value="appest.ticktick">
+            <label for="ticktick">TickTick</label><br>
+
+            <input type="checkbox" id="superlist" name="superlist" value="000" disabled>
+            <label for="superlist">Superlist</label><br>
+
+            <input type="checkbox" id="remember_the_milk" name="remember_the_milk" value="000" disabled>
+            <label for="remember_the_milk">Remember The Milk</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Gamified Productivity -->
+        <div class="step">
+          <fieldset>
+            <legend>🎮 Gamified Productivity</legend>
+
+            <input type="checkbox" id="habitica" name="habitica" value="000" disabled>
+            <label for="habitica">Habitica</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Notes, Knowledge & Documentation -->
+        <div class="step">
+          <fieldset>
+            <legend>📝 Notes, Knowledge & Documentation</legend>
+
+            <input type="checkbox" id="notion" name="notion" value="notion.notion">
+            <label for="notion">Notion</label><br>
+
+            <input type="checkbox" id="obsidian" name="obsidian" value="obsidian.obsidian">
+            <label for="obsidian">Obsidian</label><br>
+
+            <input type="checkbox" id="microsoft_onenote" name="microsoft_onenote" value="XPFFZHVGQWWLHB">
+            <label for="microsoft_onenote">Microsoft OneNote</label><br>
+
+             <input type="checkbox" id="msloop" name="msloop" value="9P1HQ5TQZMGD">
+            <label for="msloop">Microsoft Loop</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Brainstorming & Visual Collaboration -->
+        <div class="step">
+          <fieldset>
+            <legend>🧠 Brainstorming & Visual Collaboration</legend>
+
+            <input type="checkbox" id="miro" name="miro" value="9N236HQQTVNH">
+            <label for="miro">Miro</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Internal Communication & Collaboration -->
+        <div class="step">
+          <fieldset>
+            <legend>💬 Internal Communication & Collaboration</legend>
+
+            <input type="checkbox" id="microsoft_teams" name="microsoft_teams" value="XP8BT8DW290MPQ" checked>
+            <label for="microsoft_teams">Microsoft Teams (required for internal communication)</label><br>
+
+            <input type="checkbox" id="slack" name="slack" value="9WZDNCRDK3WP">
+            <label for="slack">Slack</label><br>
+
+            <input type="checkbox" id="discord" name="discord" value="XPDC2RH70K22MN">
+            <label for="discord">Discord</label><br>
+
+            <input type="checkbox" id="whatsapp" name="whatsapp" value="9NKSQGP7F2NH">
+            <label for="whatsapp">WhatsApp</label><br>
+
+            <input type="checkbox" id="viber" name="viber" value="XPFM5P5KDWF0JP">
+            <label for="viber">Viber</label><br>
+
+            <input type="checkbox" id="signal" name="signal" value="XP89119P9F2PCQ">
+            <label for="signal">Signal</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Time Tracking & Timesheets -->
+        <div class="step">
+          <fieldset>
+            <legend>⏱️ Time Tracking & Timesheets</legend>
+
+            <input type="checkbox" id="toggl_track" name="toggl_track" value="Toggl.TogglTrack" checked>
+            <label for="toggl_track">Toggl Track (required for timesheets)</label><br>
+          </fieldset>
+        </div>
+
+        <!-- ARTIFICIAL INTELLIGENCE (AI) -->
+        <div class="step">
+          <fieldset>
+            <legend>🤖 Artificial Intelligence (AI)</legend>
+
+            <input type="checkbox" id="chatgpt" name="chatgpt" value="9NT1R1C2HH7J">
+            <label for="chatgpt">ChatGPT</label><br>
+
+            <input type="checkbox" id="deepseek" name="deepseek" value="000" disabled>
+            <label for="deepseek">DeepSeek</label><br>
+
+            <input type="checkbox" id="chateau" name="chateau" value="000" disabled>
+            <label for="chateau">Chateau</label><br>
+
+            <input type="checkbox" id="perplexity" name="perplexity" value="Perplexity.Comet">
+            <label for="perplexity">Perplexity (via Comet)</label><br>
+
+            <input type="checkbox" id="notebooklm" name="notebooklm" value="000" disabled>
+            <label for="notebooklm">NotebookLM</label><br>
+
+            <input type="checkbox" id="grok" name="grok" value="000" disabled>
+            <label for="grok">Grok</label><br>
+
+            <input type="checkbox" id="gemini" name="gemini" value="000" disabled>
+            <label for="gemini">Gemini</label><br>
+
+             <input type="checkbox" id="copilot" name="copilot" value="9NHT9RB2F4HD">
+            <label for="copilot">Microsoft Copilot (FREE)</label><br>
+          </fieldset>
+        </div>
+
+        <!-- IT & PROGRAMMING -->
+        <div class="step">
+          <fieldset>
+            <legend>💻 IT & Programming</legend>
+            <p><i>Install only what you need (IT / Dev / Analytics).</i></p>
+
+            <input type="checkbox" id="pycharm" name="pycharm" value="JetBrains.PyCharm.Community">
+            <label for="pycharm">JetBrains PyCharm</label><br>
+
+            <input type="checkbox" id="intellij" name="intellij" value="JetBrains.IntelliJIDEA.Community">
+            <label for="intellij">JetBrains IntelliJ IDEA</label><br>
+
+            <input type="checkbox" id="codeblocks" name="codeblocks" value="CodeBlocks.CodeBlocks.MinGW">
+            <label for="codeblocks">Code::Blocks</label><br>
+
+            <input type="checkbox" id="nodejs" name="nodejs" value="OpenJS.NodeJS">
+            <label for="nodejs">Node.js</label><br>
+
+            <input type="checkbox" id="visualstudio2022" name="visualstudio2022" value=" Microsoft.VisualStudio.Community">
+            <label for="visualstudio2022">Visual Studio 2026</label><br>
+
+            <input type="checkbox" id="vscode" name="vscode" value="Microsoft.VisualStudioCode">
+            <label for="vscode">Visual Studio Code</label><br>
+
+            <input type="checkbox" id="xampp" name="xampp" value="ApacheFriends.Xampp.8.1">
+            <label for="xampp">XAMPP</label><br>
+
+            <input type="checkbox" id="hmailserver" name="hmailserver" value="000" disabled>
+            <label for="hmailserver">hMailServer</label><br>
+
+            <input type="checkbox" id="javasdk" name="javasdk" value="Oracle.JDK.25" checked>
+            <label for="javasdk">Java SDK</label><br>
+
+            <input type="checkbox" id="python28" name="python28" value="Python.PythonInstallManager" checked>
+            <label for="python28">Python Install Manager</label><br>
+
+            <input type="checkbox" id="vim" name="vim" value="vim.vim">
+            <label for="vim">Vim</label><br>
+
+            <input type="checkbox" id="wsl" name="wsl" value="Canonical.Ubuntu.2204">
+            <label for="wsl">Windows Subsystem for Linux (Ubuntu 22.04)</label><br>
+
+            <input type="checkbox" id="docker" name="docker" value="XP8CBJ40XLBWKX">
+            <label for="docker">Docker</label><br>
+
+            <input type="checkbox" id="vmware_workstation_pro" name="vmware_workstation_pro" value="000" disabled>
+            <label for="vmware_workstation_pro">VMware Workstation Pro</label><br>
+          </fieldset>
+        </div>
+
+        <!--Data Analytics-->
+        <div class="step">
+          <fieldset>
+            <legend>📊 Data Analytics</legend>
+
+            <input type="checkbox" id="Rlanguage" name="Rlanguage" value="RProject.R && winget install Posit.RStudio">
+            <label for="Rlanguage">R & R Studio</label><br>
+
+            <input type="checkbox" id="powerbi" name="powerbi" value="Microsoft.PowerBI ">
+            <label for="powerbi">Microsoft PowerBI</label><br>
+
+            <input type="checkbox" id="orange" name="orange" value="UniversityOfLjubljana.Orange">
+            <label for="orange">Orange Data Analytics</label><br>
+
+            <input type="checkbox" id="knime" name="knime" value="KNIMEAG.KNIMEAnalyticsPlatform">
+            <label for="knime">KNIME</label><br>
+
+          </fieldset>
+        </div>
+
+        <!-- GIS Tools -->
+        <div class="step">
+          <fieldset>
+            <legend>🌍 GIS Tools</legend>
+
+            <input type="checkbox" id="googleearth" name="googleearth" value="Google.EarthPro">
+            <label for="googleearth">Google Earth Pro</label><br>
+          </fieldset>
+        </div>
+
+        <!-- System Personalization -->
+        <div class="step">
+          <fieldset>
+            <legend>🎨 System Personalization</legend>
+
+            <input type="checkbox" id="winaero" name="winaero" value="winaero.tweaker">
+            <label for="winaero">Winaero Tweaker</label><br>
+
+            <input type="checkbox" id="powertoys" name="powertoys" value="XP89DCGQ3K6VLD" checked>
+            <label for="powertoys">Microsoft PowerToys</label><br>
+          </fieldset>
+        </div>
+
+        <!-- Finish -->
+        <div class="step">
+          <fieldset>
+            <legend>✅ All set! Enjoy your new computer!</legend>
+            <p>Your choices have been recorded. Click finish and then download and run the installer file! All the software you selected will get installed automatically!</p><br>
+            <p>More software choices will be available after the completion of this phase!</p>
+          </fieldset>
+        </div>
+
+        <!-- Navigation buttons -->
+        <br><br>
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+          <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let currentStep = 0;
+      const steps = document.getElementsByClassName("step");
+      const progressBar = document.getElementById("progressBar");
+
+      function showStep(n) {
+        steps[n].classList.add("active");
+        updateProgressBar(n);
+
+        if (n === steps.length - 1) {
+          document.getElementById("nextBtn").textContent = "Finish";
+        } else if (n === 0) {
+          document.getElementById("nextBtn").textContent = "Start";
+        } else {
+          document.getElementById("nextBtn").textContent = "Next";
+        }
+
+        if (n === 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+      }
+
+      function nextPrev(n) {
+        if (n === 1 && !validateForm()) return false;
+
+        steps[currentStep].classList.remove("active");
+        currentStep += n;
+
+        if (currentStep >= steps.length) {
+          generateBatFile();
+          return false;
+        }
+
+        showStep(currentStep);
+      }
+
+      function validateForm() {
+        return true;
+      }
+
+      function updateProgressBar(n) {
+        const progress = ((n + 1) / steps.length) * 100;
+        progressBar.style.width = progress + "%";
+      }
+
+      showStep(currentStep);
+
+      function generateBatFile() {
+        let selectedSoftware = [];
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(function(checkbox) {
+          selectedSoftware.push(checkbox.value);
+        });
+
+        if (selectedSoftware.length === 0) {
+          alert("Please select at least one software.");
+          return;
+        }
+
+        let batContent = selectedSoftware.map(software => `winget install ${software}`).join("\n");
+
+        let blob = new Blob([batContent], { type: "text/plain" });
+        let link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "install_software.bat";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
